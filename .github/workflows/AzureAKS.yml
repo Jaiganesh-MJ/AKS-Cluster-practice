@@ -27,7 +27,9 @@ jobs:
 
       - name: Import provider
         id: providerconfig
-        run: echo ${{ secrets.PROVIDER }} | base64 -d > AKS/providers.tf
+        run: |
+          ls -al
+          echo ${{ secrets.PROVIDER }} | base64 -d > /home/runner/work/AKS-Cluster-practice/AKS-Cluster-practice/AKS/providers.tf 
 
       - name: Terraform Init
         id: init
