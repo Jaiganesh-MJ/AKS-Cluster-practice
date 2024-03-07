@@ -30,6 +30,7 @@ jobs:
         run: |
           ls -al
           echo ${{ secrets.PROVIDER }} | base64 -d > /home/runner/work/AKS-Cluster-practice/AKS-Cluster-practice/AKS/providers.tf 
+          cat providers.tf
 
       - name: Terraform Init
         id: init
